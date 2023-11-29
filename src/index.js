@@ -50,7 +50,7 @@ async function fetchImages() {
 searchForm.addEventListener('submit', event => {
   event.preventDefault();
   searchQuery = event.currentTarget.elements.searchQuery.value;
-
+  loadMoreBtn.style.display = 'none';
   if (!searchQuery.trim()) {
     iziToast.warning({
       title: 'Caution',
